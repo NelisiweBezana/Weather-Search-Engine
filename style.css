@@ -6,8 +6,8 @@ body {
   padding: 30px;
   border-radius: 15px;
   background: #f0fbff;
-  width: 80%;
-  max-width: 700px;
+  width: 75%;
+  max-width: 600px;
   margin: 30px auto;
 }
 
@@ -66,13 +66,13 @@ main {
 }
 
 .current-weather-temp-value {
-  font-size: 80px;
+  font-size: 75px;
   font-weight: bold;
   line-height: 88px;
 }
 
 .current-weather-temp-icon {
-  width: 88px;
+  width: 70px;
   height: 88px;
   margin-left: 10px;
 }

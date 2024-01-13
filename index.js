@@ -20,6 +20,8 @@ function displayTemperature(response) {
 
   let weatherIcon = document.querySelector("#current-weather-temp-icon");
   weatherIcon.innerHTML = `<img src="${response.data.condition.icon_url}" class="current-weather-temp-icon" />`;
+
+  getForecast(response.data.city);
 }
 
 function showDate(date) {
@@ -58,7 +60,16 @@ function handleSearchCity(event) {
   searchCity(searchInput.value);
 }
 
-function displayForecast() {
+function getForecast(city) {
+  let apiKey = "6ot20ada7f719432a222baf96f0e9bb0";
+  let forecastWeatherApiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+
+  axios(forecastWeatherApiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response.data);
+
   let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
   let forecastHtml = "";
 
@@ -87,4 +98,3 @@ let searchCityForm = document.querySelector("#search-form");
 searchCityForm.addEventListener("submit", handleSearchCity);
 
 searchCity("sandton");
-displayForecast();
