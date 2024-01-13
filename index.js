@@ -1,14 +1,3 @@
-function searchCity(event) {
-  event.preventDefault();
-  let searchInput = document.querySelector(".search-form-input");
-  let city = searchInput.value;
-
-  let apiKey = "6ot20ada7f719432a222baf96f0e9bb0";
-  let currentWeatherapiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-
-  axios.get(currentWeatherapiUrl).then(displayTemperature);
-}
-
 function displayTemperature(response) {
   let currentTempValue = document.querySelector(".current-weather-temp-value");
   currentTempValue.innerHTML = Math.round(response.data.temperature.current);
@@ -55,5 +44,21 @@ function showDate(date) {
   return `${day} ${fullCurrentTime}`;
 }
 
+function searchCity(city) {
+  let apiKey = "6ot20ada7f719432a222baf96f0e9bb0";
+  let currentWeatherapiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+
+  axios.get(currentWeatherapiUrl).then(displayTemperature);
+}
+
+function handleSearchCity(event) {
+  event.preventDefault();
+
+  let searchInput = document.querySelector(".search-form-input");
+  searchCity(searchInput.value);
+}
+
 let searchCityForm = document.querySelector("#search-form");
-searchCityForm.addEventListener("submit", searchCity);
+searchCityForm.addEventListener("submit", handleSearchCity);
+
+searchCity("Johannesburg");
