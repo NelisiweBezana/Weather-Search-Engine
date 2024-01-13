@@ -61,4 +61,4 @@ function handleSearchCity(event) {
 let searchCityForm = document.querySelector("#search-form");
 searchCityForm.addEventListener("submit", handleSearchCity);
 
-searchCity("Johannesburg");
+searchCity("sandton");
