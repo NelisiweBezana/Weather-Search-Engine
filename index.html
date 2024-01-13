@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla Weather App</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <form class="search-form" id="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city"
+            required
+            class="search-form-input"
+          />
+          <input type="submit" value="Search" class="search-form-submit" />
+        </form>
+      </header>
+      <main>
+        <div class="current-weather-section">
+          <div>
+            <h1 class="current-weather-city">Paris</h1>
+            <p class="current-weather-details">
+              <span id="date-and-time">Saturday 15:32</span>,
+              <span id="weather-condition"> moderate rain </span>
+              <br />
+              Humidity: <strong id="humidity-value">87%</strong>, Wind:
+              <strong id="windspeed-value">7.2km/h</strong>
+            </p>
+          </div>
+          <div class="current-weather-temp">
+            <div id="current-weather-temp-icon">
+              <img
+                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/scattered-clouds-night.png"
+                class="current-weather-temp-icon"
+              />
+            </div>
+            <div class="current-weather-temp-value">24</div>
+            <div class="current-weather-temp-unit">°C</div>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <p>
+          <small>This project was coded by</small>
+          <a href="https://github.com/NelisiweBezana" target="_blank"
+            >Nelisiwe Bezana</a
+          >
+          <small>and is on</small>
+          <a
+            href="https://github.com/NelisiweBezana/Vanilla-Weather-Search"
+            target="_blank"
+          >
+            GitHub</a
+          >
+          <small>and hosted on</small>
+          <a
+            href="https://vanillaweathersearchapp.netlify.app/"
+            target="_blank"
+          >
+            Netlify</a
+          >
+        </p>
+      </footer>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
