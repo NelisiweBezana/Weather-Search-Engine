@@ -85,29 +85,12 @@ main {
 
 .weather-forecast {
   display: flex;
+  text-align: center;
   justify-content: space-between;
   background: #d9eef6;
   border-radius: 10px;
   padding: 20px 30px;
   box-shadow: 2px 2px 5px #99a9ae;
-}
-
-.forecast-day {
-  text-align: center;
-  font-size: 15px;
-  font-weight: bold;
-  opacity: 0.5;
-}
-
-.forecast-icon {
-  text-align: center;
-  width: 50px;
-}
-
-.forecast-temp {
-  text-align: center;
-  color: #5fc9f3;
-  font-size: 15px;
 }
 
 a {
